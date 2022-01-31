@@ -1,0 +1,100 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: blue;}
+#News {background-color: rebeccapurple;}
+#Contact {background-color: purple;}
+#About {background-color: orange;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+    <p>Welcome to My Page<br><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida luctus lorem. Nulla facilisi. Morbi dapibus nisi sed diam dictum, in fringilla risus sagittis. Aenean blandit tempus eros non posuere. Sed pellentesque dapibus felis, vestibulum molestie velit lacinia non. Donec id ante elit. Etiam urna urna, volutpat vel nisi vitae, mattis pretium enim. Vivamus finibus leo condimentum iaculis semper.</span></p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida luctus lorem. Nulla facilisi. Morbi dapibus nisi sed diam dictum, in fringilla risus sagittis. Aenean blandit tempus eros non posuere. Sed pellentesque dapibus felis, vestibulum molestie velit lacinia non. Donec id ante elit. Etiam urna urna, volutpat vel nisi vitae, mattis pretium enim. Vivamus finibus leo condimentum iaculis semper.</p>
+
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>01716189977.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida luctus lorem. Nulla facilisi. Morbi dapibus nisi sed diam dictum, in fringilla risus sagittis. Aenean blandit tempus eros non posuere. Sed pellentesque dapibus felis, vestibulum molestie velit lacinia non. Donec id ante elit. Etiam urna urna, volutpat vel nisi vitae, mattis pretium enim. Vivamus finibus leo condimentum iaculis semper.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida luctus lorem. Nulla facilisi. Morbi dapibus nisi sed diam dictum, in fringilla risus sagittis. Aenean blandit tempus eros non posuere. Sed pellentesque dapibus felis, vestibulum molestie velit lacinia non. Donec id ante elit. Etiam urna urna, volutpat vel nisi vitae, mattis pretium enim. Vivamus finibus leo condimentum iaculis semper.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   <div style="padding-left:16px"></div>
+  <h2 style="text-color:brown">Welcome To My Site.</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida luctus lorem. Nulla facilisi. Morbi dapibus nisi sed diam dictum, in fringilla risus sagittis. Aenean blandit tempus eros non posuere. Sed pellentesque dapibus felis, vestibulum molestie velit lacinia non. Donec id ante elit. Etiam urna urna, volutpat vel nisi vitae, mattis pretium enim. Vivamus finibus leo condimentum iaculis semper.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida luctus lorem. Nulla facilisi. Morbi dapibus nisi sed diam dictum, in fringilla risus sagittis. Aenean blandit tempus eros non posuere. Sed pellentesque dapibus felis, vestibulum molestie velit lacinia non. Donec id ante elit. Etiam urna urna, volutpat vel nisi vitae, mattis pretium enim. Vivamus finibus leo condimentum iaculis semper.</p>
+
+</body>
+</html> 
